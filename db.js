@@ -1,12 +1,15 @@
-var mysql = require('mysql2/promise')
+// npm i mysql2
+var mysql = require('mysql2/promise'); 
+
+// Create a connection pool
 var pool = mysql.createPool({
-    host: 'localhost',
+    host: '127.0.0.1',
     port: 3306,
-    user:'root',
-    password:'',
-    database: 'api'
-})
+    user: 'root',
+    password: 'escola',
+    database: 'api_becker', // ** EDITAR O NOME DO SEU BANCO DE DADOS AQUI! **
+});
 
 module.exports = Object.freeze({
-    pool: poolr
-})
+  pool: pool
+});
